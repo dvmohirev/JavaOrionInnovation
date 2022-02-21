@@ -1,4 +1,4 @@
-package homework.task4.task1;
+package homework.Task4.task1;
 
 public class Apple extends Fruit{
     private String colour; // красное, зеленое, желтое

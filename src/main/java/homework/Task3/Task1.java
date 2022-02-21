@@ -1,4 +1,4 @@
-package homework.task3;
+package homework.Task3;
 
 public class Task1 {
     // Цифровая персонализация

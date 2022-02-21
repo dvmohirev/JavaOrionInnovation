@@ -1,4 +1,4 @@
-package homework.task4.task1;
+package homework.Task4.task1;
 
 public class Orange extends Fruit{
     private int skinThickness; // от 0 до 20

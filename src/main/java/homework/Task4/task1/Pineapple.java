@@ -1,4 +1,4 @@
-package homework.task4.task1;
+package homework.Task4.task1;
 
 public class Pineapple extends Fruit{
     private int heightTail; // от 5 до 20

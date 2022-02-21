@@ -1,7 +1,4 @@
-package homework.task4.task1;
-
-import java.util.ArrayList;
-import java.util.spi.AbstractResourceBundleProvider;
+package homework.Task4.task1;
 
 public class Fruit {
 
@@ -24,21 +21,33 @@ public class Fruit {
             switch (type){
                 case APPLE:
                     Apple apple = new Apple();
-                    apple.setColour("красный");
+                    int x = 1 + (int)(Math.random()*((3 - 1) + 1));
+                    switch (x){
+                        case 1:
+                            apple.setColour("красное");
+                            break;
+                        case 2:
+                            apple.setColour("зеленое");
+                            break;
+                        case 3:
+                            apple.setColour("желтое");
+                            break;
+                    }
                     fruit = apple;
                     break;
                 case ORANGE:
                     Orange orange = new Orange();
-                    orange.setSkinThickness(5);
+                    orange.setSkinThickness((int)(Math.random()*(21)));
                     fruit = orange;
                     break;
                 case PINEAPPLE:
                     Pineapple pineapple = new Pineapple();
-                    pineapple.setHeightTail(10);
+                    pineapple.setHeightTail(5 + (int)(Math.random()*((20 - 5) + 1)));
                     fruit = pineapple;
                     break;
                 case FRUIT:
                     fruit = new Fruit();
+                    weight = 50 + (int)(Math.random()*((100 - 50) + 1));
                     break;
             }
         return fruit;

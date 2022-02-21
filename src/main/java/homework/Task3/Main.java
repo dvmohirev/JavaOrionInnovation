@@ -1,4 +1,4 @@
-package homework.task3;
+package homework.Task3;
 
 public class Main {
     public static void main(String[] args) {
@@ -20,11 +20,11 @@ public class Main {
         task1.digitalForPerson();*/
 
         // решаем задачу 2
-        System.out.println(new Task2.SequentialRandom().getExample());
-        System.out.println(new Task2.SequentialRandom().getExample());
-        System.out.println(new Task2.SequentialRandom().getExample());
-        System.out.println(Task2.SequentialRandom.resetRandom());
-        System.out.println(new Task2.SequentialRandom().getExample());
-        System.out.println(new Task2.SequentialRandom().getExample());
+        new Task2.SequentialRandom();
+        new Task2.SequentialRandom();
+        new Task2.SequentialRandom();
+        Task2.SequentialRandom.resetRandom();
+        new Task2.SequentialRandom();
+        new Task2.SequentialRandom();
     }
 }
