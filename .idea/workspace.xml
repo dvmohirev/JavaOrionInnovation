@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="99a46aae-4089-472b-9746-854ac2c4ecd4" name="Changes" comment="Не решены задачи - №10, №11 (task3), №12 (вывести товары в виде таблицы)" />
+    <list default="true" id="99a46aae-4089-472b-9746-854ac2c4ecd4" name="Changes" comment="Не решены задачи - №10, №11 (task3), №12 (вывести товары в виде таблицы)">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/homework/Task11/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homework/Task11/Main.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,8 +24,8 @@
         <option value="JUnit5 Test Class" />
         <option value="AnnotationType" />
         <option value="Enum" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -39,6 +42,13 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
   </component>
   <component name="ProjectId" id="24TFHZHj49Pj4JsN8HAKR2bb3vA" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -75,7 +85,7 @@
       <recent name="homework.task1" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main (5)">
+  <component name="RunManager" selected="Application.Main (3)">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="homework.Task8.v2.Main" />
       <module name="JavaOrionInnovation" />
@@ -102,12 +112,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main (4)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="homework.Task7.Main" />
+    <configuration name="Main (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="homework.Task12.Main" />
       <module name="JavaOrionInnovation" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="homework.Task7.*" />
+          <option name="PATTERN" value="homework.Task12.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -141,26 +151,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="homework.task4.Main" />
-      <module name="JavaOrionInnovation" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="homework.task4.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main (3)" />
         <item itemvalue="Application.Main (5)" />
         <item itemvalue="Application.Main (2)" />
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main (6)" />
-        <item itemvalue="Application.Main (4)" />
       </list>
     </recent_temporary>
   </component>
@@ -186,6 +183,9 @@
       <workItem from="1645110776599" duration="12938000" />
       <workItem from="1645343469040" duration="35000" />
       <workItem from="1645362149452" duration="9249000" />
+      <workItem from="1645468880681" duration="267000" />
+      <workItem from="1645715032889" duration="7605000" />
+      <workItem from="1645730949605" duration="3988000" />
     </task>
     <task id="LOCAL-00001" summary="Решение первых трех задач">
       <created>1645466135020</created>
@@ -201,7 +201,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645466632130</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Не решены задачи - №10, №11 (task3), №12 (вывести товары в виде таблицы)">
+      <created>1645469036586</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1645469036586</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,7 +219,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>

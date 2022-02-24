@@ -4,7 +4,10 @@ import homework.Task11.task1.Names;
 import homework.Task11.task1.Person;
 import homework.Task11.task2.Calculator;
 import homework.Task11.task2.IllegalOperationException;
+import homework.Task11.task3.Lection;
+import homework.Task11.task3.Student;
 
+import java.time.LocalDate;
 import java.util.*;
 
 public class Main {
@@ -33,7 +36,7 @@ public class Main {
     private static final String NOT_DIGIT_ARGUMENGTS = "Provided arguments are not digits.";
 
     public static void main(String[] args) {
-        //task1
+        /*//task1
         addElementsToCollection();
         personList.forEach((person) -> System.out.println(person));
 
@@ -81,7 +84,34 @@ public class Main {
             else {
                 System.out.println(NOT_DIGIT_ARGUMENGTS);
             }
+        }*/
+
+        //task3
+        //для примера разместили одного студента, который посетил все 5 курсов
+        List<Student> students = new ArrayList<>();
+        Set<Lection> lec = new HashSet<>();
+        lec.add(new Lection("матанализ", LocalDate.of(2022, 6, 5)));
+        lec.add(new Lection("философия", LocalDate.of(2022, 6, 10)));
+        lec.add(new Lection("английский язык", LocalDate.of(2022, 6, 15)));
+        lec.add(new Lection("история", LocalDate.of(2022, 6, 20)));
+        lec.add(new Lection("физкультура", LocalDate.of(2022, 6, 25)));
+
+        Student st = new Student("Дима", lec);
+        students.add(st);
+        //Выведите список студентов, которые хоть раз посещали матанализ.
+        //Нужно сначала получить одного студента -> получить список его лекций->
+        //проверить каждую лекцию на соответствие названия искомой лекции->
+        //если true - выводим имя студента, если false - берем следующего
+        //решение задачи без использования Stream
+        for (Student man : students) {
+            for (Lection lc: man.lectionSet) {
+                if (lc.getTitleOfLection().equals("матанализ")){
+                    System.out.println(man.getName());
+                }
+            }
         }
+        //делаем с помощью stream - не придумал пока
+
     }
     //task1
     private static void addElementsToCollection() {
