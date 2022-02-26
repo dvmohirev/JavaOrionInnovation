@@ -9,6 +9,7 @@ import homework.Task11.task3.Student;
 
 import java.time.LocalDate;
 import java.util.*;
+import java.util.stream.Stream;
 
 public class Main {
     //task1
@@ -92,13 +93,19 @@ public class Main {
         Set<Lection> lec = new HashSet<>();
         lec.add(new Lection("матанализ", LocalDate.of(2022, 6, 5)));
         lec.add(new Lection("философия", LocalDate.of(2022, 6, 10)));
-        lec.add(new Lection("английский язык", LocalDate.of(2022, 6, 15)));
+        lec.add(new Lection("английский язык", LocalDate.of(2022, 6, 10)));
         lec.add(new Lection("история", LocalDate.of(2022, 6, 20)));
         lec.add(new Lection("физкультура", LocalDate.of(2022, 6, 25)));
+        Set<Lection> lec1 = new HashSet<>();
+        lec1.add(new Lection("матанализ", LocalDate.of(2022, 6, 5)));
+        lec1.add(new Lection("философия", LocalDate.of(2022, 6, 5)));
+        lec1.add(new Lection("английский язык", LocalDate.of(2022, 6, 15)));
 
         Student st = new Student("Дима", lec);
+        Student st1 = new Student("Сергей", lec1);
         students.add(st);
-        //Выведите список студентов, которые хоть раз посещали матанализ.
+        students.add(st1);
+        //1. Выведите список студентов, которые хоть раз посещали матанализ.
         //Нужно сначала получить одного студента -> получить список его лекций->
         //проверить каждую лекцию на соответствие названия искомой лекции->
         //если true - выводим имя студента, если false - берем следующего
@@ -110,8 +117,84 @@ public class Main {
                 }
             }
         }
-        //делаем с помощью stream - не придумал пока
+        //2. Выведите статистику посещений для каждого студентам в формате: имя - количество посещенных лекций.
+        System.out.println("Cтатистика посещений в формате: имя - количество посещенных лекций");
+        for (Student man : students) {
+            System.out.println(man.getName() + " - " + man.lectionSet.size());
+        }
+        //3. Выведите название дисциплин, имеющих наибольшее количество посещений.
+        String[] lect = {"матанализ","философия","английский язык","история","физкультура"};
+        Map<String, Integer> mapOfLections = new HashMap<>();
+        for (int i = 0; i < lect.length; i++) {
+            mapOfLections.put(lect[i], 0);
+        }
+        System.out.println("Название дисциплины/дисциплин, имеющих наибольшее количество посещений");
+        for (Student man : students) {
+            for (Lection lc: man.lectionSet) {
+                for (Map.Entry<String, Integer> pair: mapOfLections.entrySet()) {
+                    if (lc.getTitleOfLection().equals(pair.getKey())){
+                        pair.setValue(pair.getValue()+1);
+                    }
+                }
+            }
+        }
+        int max = mapOfLections.values().stream().max(Integer::compare).get();
+        for (Map.Entry<String, Integer> pair: mapOfLections.entrySet()) {
+            if (pair.getValue() == max){
+                System.out.println("Самая частая дисциплина: " + pair.getKey());
+            }
+        }
+        mapOfLections.clear();
+        //4. Выведите имена студентов, которые посетили наибольшее количество лекций в день.
 
+        System.out.println("Имена студентов, которые посетили наибольшее количество лекций в день");
+        Map<String, Map<LocalDate,Integer>> mapNameOnOneDay = new HashMap<>();
+        for (Student man : students) {
+            Map<LocalDate, Integer> mapLecOnOneDay = new HashMap<>();
+            for (Lection lc: man.lectionSet) {
+                if (mapLecOnOneDay.containsKey(lc.getDateOfLection())){
+                    mapLecOnOneDay.put(lc.getDateOfLection(),mapLecOnOneDay.get(lc.getDateOfLection())+1);
+                } else {
+                    mapLecOnOneDay.put(lc.getDateOfLection(), 0);
+                }
+            }
+            mapNameOnOneDay.put(man.getName(), mapLecOnOneDay);
+        }
+        int maxTemp = 0;
+        for (Map.Entry<String, Map<LocalDate,Integer>> pairOfName: mapNameOnOneDay.entrySet()) {
+            if (maxTemp < pairOfName.getValue().values().stream().max(Integer::compare).get()){
+                maxTemp = pairOfName.getValue().values().stream().max(Integer::compare).get();
+            }
+        }
+        for (Map.Entry<String, Map<LocalDate,Integer>> pairOfName: mapNameOnOneDay.entrySet()) {
+            if (pairOfName.getValue().containsValue(maxTemp)){
+                System.out.println(pairOfName.getKey() + " посетил наибольшее количество лекций в день");
+            }
+        }
+        mapNameOnOneDay.clear();
+        //5. Выведите статистику по курсам в формате:
+        //название курсов - количество разных студентов, которые посетили хотя бы одно занятие. (т.е. в лучше случае это будет 10)
+        //не работает
+        /*System.out.println("Название курсов - количество разных студентов, которые посетили хотя бы одно занятие.");
+        Map<String, StringBuilder> map = new HashMap<>();
+        for (Student man : students) {
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < lect.length; i++) {
+                if (man.lectionSet.iterator().hasNext()){
+                    if (man.lectionSet.iterator().next().getTitleOfLection().equals(lect[i])){
+                        if (map.containsKey(lect[i])){
+                            map.put(lect[i], map.get(lect[i]).append(man.getName()));
+                        } else {
+                            map.put(lect[i], null);
+                        }
+                    }
+                }
+            }
+        }
+        for (Map.Entry<String, StringBuilder> pair: map.entrySet()) {
+            System.out.println("Курс " + pair.getKey() + " - Студенты: " + pair.getValue());
+        }
+        map.clear();*/
     }
     //task1
     private static void addElementsToCollection() {

@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="99a46aae-4089-472b-9746-854ac2c4ecd4" name="Changes" comment="Не решены задачи - №10, №11 (task3), №12 (вывести товары в виде таблицы)">
+    <list default="true" id="99a46aae-4089-472b-9746-854ac2c4ecd4" name="Changes" comment="Не решен таск3 в задаче 11, остальные решены, но нужно сделать рефакторинг и добавать пояснений.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/homework/Task11/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/homework/Task11/Main.java" afterDir="false" />
     </list>
@@ -85,7 +85,7 @@
       <recent name="homework.task1" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main (3)">
+  <component name="RunManager" selected="Application.Main (5)">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="homework.Task8.v2.Main" />
       <module name="JavaOrionInnovation" />
@@ -153,8 +153,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main (3)" />
         <item itemvalue="Application.Main (5)" />
+        <item itemvalue="Application.Main (3)" />
         <item itemvalue="Application.Main (2)" />
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main (6)" />
@@ -185,7 +185,8 @@
       <workItem from="1645362149452" duration="9249000" />
       <workItem from="1645468880681" duration="267000" />
       <workItem from="1645715032889" duration="7605000" />
-      <workItem from="1645730949605" duration="3988000" />
+      <workItem from="1645730949605" duration="4362000" />
+      <workItem from="1645883969387" duration="10785000" />
     </task>
     <task id="LOCAL-00001" summary="Решение первых трех задач">
       <created>1645466135020</created>
@@ -208,7 +209,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645469036586</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Не решен таск3 в задаче 11, остальные решены, но нужно сделать рефакторинг и добавать пояснений.">
+      <created>1645735039349</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1645735039349</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,7 +248,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Решение первых трех задач" />
     <MESSAGE value="Не решены задачи - №10, №11 (task3), №12 (вывести товары в виде таблицы)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Не решены задачи - №10, №11 (task3), №12 (вывести товары в виде таблицы)" />
+    <MESSAGE value="Не решен таск3 в задаче 11, остальные решены, но нужно сделать рефакторинг и добавать пояснений." />
+    <option name="LAST_COMMIT_MESSAGE" value="Не решен таск3 в задаче 11, остальные решены, но нужно сделать рефакторинг и добавать пояснений." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/JavaOrionInnovation$Main__3_.ic" NAME="Main (3) Coverage Results" MODIFIED="1644145716106" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
